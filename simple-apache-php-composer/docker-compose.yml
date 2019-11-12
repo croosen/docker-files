@@ -1,0 +1,19 @@
+version: "3.6"
+
+services:
+
+  apache-php:
+    image: udovicic/echo:apache-php7.3
+
+    ports:
+      - "8181:80"
+
+    expose:
+      - "9000"
+
+    volumes:
+      - ./docker/xdebug.ini:/etc/php/7.3/mods-available/xdebug.ini
+      - .:/var/www/html
+
+    environment:
+      - APACHE_RUN_USER=1000
