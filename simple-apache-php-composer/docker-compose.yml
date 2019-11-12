@@ -12,7 +12,7 @@ services:
       - "9000"
 
     volumes:
-      - ./docker/xdebug.ini:/etc/php/7.3/mods-available/xdebug.ini
+      - .xdebug.ini:/etc/php/7.3/mods-available/xdebug.ini
       - .:/var/www/html
 
     environment:
